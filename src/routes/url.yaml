@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  version: "Finn"
+  title: Nextport
+paths: { }
+components:
+  schemas:
+    EncodeURLPost:
+      description: URL body interface for encoding
+      type: object
+      required:
+        - url
+      properties:
+        url:
+          type: string
+          description: the URL that needs to be shortened
+    DecodeURLPost:
+      description: URL body interface for decoding
+      type: object
+      required:
+        - url
+      properties:
+        url:
+          type: string
+          description: the shortened URL that needs to be decoded
+    EncodeURL:
+      description: Encoded URL response object
+      type: object
+      properties:
+        url:
+          type: string
+          description: the encoded and shrotened version of a URL
+    DecodeURL:
+      description: Decoded URL response object
+      type: object
+      properties:
+        url:
+          type: string
+          description: the decoded original URL
